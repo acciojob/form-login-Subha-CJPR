@@ -1,5 +1,6 @@
-function getFormvalue() {
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    alert(firstName  + lastName);
+function getFormvalue(event) {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    var firstName = document.querySelector("input[name='fname']").value;
+    var lastName = document.querySelector("input[name='lname']").value;
+    alert("First Name: " + firstName + "\nLast Name: " + lastName);
 }
